@@ -14,7 +14,7 @@ var gameProperties = {
     //this is the actual game size to determine the boundary of 
     //the world
     gameWidth: 2000,
-    gameHeight: 4000,
+    gameHeight: 4001,
 };
 
 // this is the main game state
