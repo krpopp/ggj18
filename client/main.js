@@ -1,5 +1,5 @@
 var socket;
-socket = io.connect();
+socket = io.connect('http://localhost:2000');
 
 
 canvas_width = window.innerWidth * window.devicePixelRatio;
@@ -29,6 +29,10 @@ function onsocketConnected() {
         y: 0,
         angle: 0
     });
+}
+
+function onNotWork() {
+    console.log("didn't work");
 }
 
 // When the server notifies us of client disconnection, we find the disconnected
@@ -144,6 +148,7 @@ main.prototype = {
         game.stage.backgroundColor = 0xE1A193;;
         console.log("client started");
         socket.on("connect", onsocketConnected);
+        socket.on("connect_failed", onNotWork);
 
         //listen to new enemy connections
         socket.on("new_enemyPlayer", onNewPlayer);
