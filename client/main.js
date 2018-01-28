@@ -46,6 +46,7 @@ function onRemovePlayer(data) {
 }
 
 function createPlayer() {
+    console.log("hmmmmmmmmmmmm");
     player = game.add.graphics(0, 0);
     player.radius = 100;
 
